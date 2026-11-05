@@ -130,3 +130,4 @@ flutter test
 ## Notes for reminders on Android
 
 For reminders to work when the app is closed, allow notifications and set the app's battery usage to **Unrestricted** in the phone settings (on Samsung phones also add it to *Never sleeping apps*). Do not use *Force stop*, because Android removes all alarms of a force-stopped app.
+   > Video demo: https://drive.google.com/file/d/1qoOtvlUj1jWPR1lgG8xHKXkOFLqxqafh/view?usp=drivesdk
