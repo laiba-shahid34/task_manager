@@ -53,6 +53,7 @@ class AppState extends ChangeNotifier {
   /// Re-creates every reminder. Called each time the app opens so nothing is
   /// lost (after a restart, an update, or if the phone cleared the alarms).
   Future<void> rescheduleAll() async {
+    await Notifier.cancelAll(); // also removes leftovers of deleted tasks
     for (final t in List<Task>.from(tasks)) {
       try {
         await Notifier.schedule(t, sound);
@@ -279,6 +280,7 @@ class AppState extends ChangeNotifier {
     tasks.removeWhere((t) => t.isDone);
     notifyListeners();
     for (final t in done) {
+      await Notifier.cancelFor(t);
       await Db.i.deleteTask(t.id!);
     }
   }
@@ -289,6 +291,7 @@ class AppState extends ChangeNotifier {
     }
     tasks.clear();
     notifyListeners();
+    await Notifier.cancelAll();
     await Db.i.deleteAllTasks();
   }
 

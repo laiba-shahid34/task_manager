@@ -143,11 +143,20 @@ class Notifier {
     return NotificationDetails(android: a);
   }
 
+  /// Removes every scheduled and shown notification of this app.
+  static Future<void> cancelAll() async {
+    try {
+      await _plugin.cancelAll();
+    } catch (e) {
+      debugPrint('cancelAll failed: $e');
+    }
+  }
+
   static Future<void> cancelFor(Task t) async {
     if (t.id == null) return;
     for (var k = 0; k <= 13; k++) {
       try {
-        await _plugin.cancel(id: t.id! * 10 + k);
+        await _plugin.cancel(id: t.id! * 20 + k);
       } catch (_) {}
     }
   }
