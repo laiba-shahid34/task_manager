@@ -11,9 +11,9 @@ A task management app built with **Flutter** and **SQLite**. Plan your day, repe
 |---|---|---|---|
 | ![Welcome](docs/screenshots/splash.png) | ![Home](docs/screenshots/home.png) | ![Add task](docs/screenshots/add_task.png) | ![Calendar](docs/screenshots/calendar.png) |
 
-| Stats | Settings | Reminder sounds |
-|---|---|---|
-| ![Stats](docs/screenshots/stats.png) | ![Settings](docs/screenshots/settings.png) | ![Sounds](docs/screenshots/sounds.png) |
+| Stats | Settings | Reminder sounds | Reminders and battery |
+|---|---|---|---|
+| ![Stats](docs/screenshots/stats.png) | ![Settings](docs/screenshots/settings.png) | ![Sounds](docs/screenshots/sounds.png) | ![Reminders](docs/screenshots/reminders.png) |
 
 ## Features
 
@@ -40,7 +40,7 @@ A task management app built with **Flutter** and **SQLite**. Plan your day, repe
 
 **Notifications**
 - Local reminder at the task's due time. Works when the app is closed and is restored after a phone restart.
-- "Still pending" follow-up reminders if the task is not completed: after **10 minutes, 1 hour, 1 day and 1 week**. They are cancelled as soon as the task is completed.
+- "Still pending" follow-up reminders if the task is not completed: repeated every **5, 10, 15, 30 or 60 minutes** (your choice in Settings, default 10 min) until you tick the task as done or press **Done** / **Stop** on the notification.
 - Choose the reminder sound: Dreamy chime, Crystal bell, Soft pluck, Phone default, Silent or a **Loud alarm** that keeps ringing until dismissed.
 - Test buttons in Settings to check that notifications work.
 
