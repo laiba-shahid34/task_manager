@@ -2,7 +2,7 @@
 
 A task management app built with **Flutter** and **SQLite**. Plan your day, repeat tasks, track progress with subtasks, get reminders (even when the app is closed) and export your tasks as CSV or PDF.
 
-> Video demo: **ADD YOUR LINK HERE** (YouTube / Google Drive)
+> Video demo: [Watch the demo on Google Drive](https://drive.google.com/file/d/1qoOtvlUj1jWPR1lgG8xHKXkOFLqxqafh/view?usp=drivesdk)
 > Download the app: [`release/task_manager.apk`](release/task_manager.apk)
 
 ## Screenshots
@@ -130,4 +130,3 @@ flutter test
 ## Notes for reminders on Android
 
 For reminders to work when the app is closed, allow notifications and set the app's battery usage to **Unrestricted** in the phone settings (on Samsung phones also add it to *Never sleeping apps*). Do not use *Force stop*, because Android removes all alarms of a force-stopped app.
-   > Video demo: https://drive.google.com/file/d/1qoOtvlUj1jWPR1lgG8xHKXkOFLqxqafh/view?usp=drivesdk
