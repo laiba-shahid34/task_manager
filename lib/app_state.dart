@@ -17,6 +17,7 @@ class AppState extends ChangeNotifier {
   bool musicOn = true;
   double musicVolume = 0.35;
   String sound = 'chime'; // chime | bell | soft | default | silent
+  int nagMinutes = 10; // "still pending" reminder every N min (0 = off)
   bool onboarded = false;
 
   // calendar tab -> remembered so the + button can pre-fill the date
@@ -44,6 +45,8 @@ class AppState extends ChangeNotifier {
     musicOn = (await db.getSetting('musicOn')) != '0';
     musicVolume = double.tryParse((await db.getSetting('musicVolume')) ?? '') ?? 0.35;
     sound = (await db.getSetting('sound')) ?? 'chime';
+    nagMinutes = int.tryParse((await db.getSetting('nagMinutes')) ?? '') ?? 10;
+    Notifier.nagMinutes = nagMinutes;
     onboarded = (await db.getSetting('onboarded')) == '1';
 
     loading = false;
@@ -53,14 +56,41 @@ class AppState extends ChangeNotifier {
   /// Re-creates every reminder. Called each time the app opens so nothing is
   /// lost (after a restart, an update, or if the phone cleared the alarms).
   Future<void> rescheduleAll() async {
-    await Notifier.cancelAll(); // also removes leftovers of deleted tasks
+    await Notifier.cancelEverything(); // also removes leftovers of old versions
     for (final t in List<Task>.from(tasks)) {
       try {
-        await Notifier.schedule(t, sound);
+        await _sched(t);
       } catch (e) {
         debugPrint('Reschedule failed for ${t.id}: $e');
       }
     }
+  }
+
+  /// Keeps the total number of scheduled alarms under Android's limit (~500).
+  Future<void> _sched(Task t) {
+    final active = tasks.where((x) => x.hasReminder && !x.isDone).length;
+    Notifier.perTaskNags = (400 ~/ (active < 1 ? 1 : active)).clamp(6, 60);
+    return Notifier.schedule(t, sound);
+  }
+
+  final Map<int, DateTime> _doneFromNotif = {};
+
+  /// "Done" button on a notification.
+  Future<void> completeFromNotification(int id) async {
+    final t = byId(id);
+    if (t == null || t.isDone) return;
+    final last = _doneFromNotif[id];
+    if (last != null && DateTime.now().difference(last).inSeconds < 10) return;
+    _doneFromNotif[id] = DateTime.now();
+    await toggleDone(t);
+  }
+
+  Future<void> setNagMinutes(int m) async {
+    nagMinutes = m;
+    Notifier.nagMinutes = m;
+    notifyListeners();
+    await Db.i.setSetting('nagMinutes', '$m');
+    await rescheduleAll();
   }
 
   Future<void> completeOnboarding() async {
@@ -161,9 +191,7 @@ class AppState extends ChangeNotifier {
     sound = s;
     notifyListeners();
     await Db.i.setSetting('sound', s);
-    for (final t in tasks) {
-      await Notifier.schedule(t, sound);
-    }
+    await rescheduleAll();
   }
 
   void selectDay(DateTime d) {
@@ -194,7 +222,7 @@ class AppState extends ChangeNotifier {
         tasks.add(t);
       }
     }
-    await Notifier.schedule(t, sound);
+    await _sched(t);
     notifyListeners();
   }
 
@@ -212,7 +240,7 @@ class AppState extends ChangeNotifier {
     }
     notifyListeners();
     await Db.i.updateTask(t);
-    await Notifier.schedule(t, sound);
+    await _sched(t);
   }
 
   /// A repeating task is never "finished": a copy goes to Completed and the
@@ -242,7 +270,7 @@ class AppState extends ChangeNotifier {
     }
     notifyListeners();
     await Db.i.updateTask(t);
-    await Notifier.schedule(t, sound);
+    await _sched(t);
   }
 
   Future<void> toggleImportant(Task t) async {
@@ -255,7 +283,7 @@ class AppState extends ChangeNotifier {
     t.hasReminder = !t.hasReminder;
     notifyListeners();
     await Db.i.updateTask(t);
-    await Notifier.schedule(t, sound);
+    await _sched(t);
   }
 
   /// Removes at once (so swipe-to-delete is smooth) and returns the task
@@ -271,7 +299,7 @@ class AppState extends ChangeNotifier {
   Future<void> restoreTask(Task t) async {
     await Db.i.insertTask(t); // keeps the old id
     tasks.add(t);
-    await Notifier.schedule(t, sound);
+    await _sched(t);
     notifyListeners();
   }
 
@@ -280,7 +308,6 @@ class AppState extends ChangeNotifier {
     tasks.removeWhere((t) => t.isDone);
     notifyListeners();
     for (final t in done) {
-      await Notifier.cancelFor(t);
       await Db.i.deleteTask(t.id!);
     }
   }
@@ -291,7 +318,6 @@ class AppState extends ChangeNotifier {
     }
     tasks.clear();
     notifyListeners();
-    await Notifier.cancelAll();
     await Db.i.deleteAllTasks();
   }
 

@@ -242,6 +242,63 @@ class SettingsPage extends StatelessWidget {
                   },
                 ),
               const Divider(),
+              Padding(
+                padding: const EdgeInsets.only(top: 6, bottom: 4),
+                child: Text('Keep reminding me until the task is done',
+                    style: TextStyle(fontWeight: FontWeight.w700, color: pal.text)),
+              ),
+              Text(
+                'If a task is not completed, you get a reminder again and again '
+                'after the due time. Tick the task as done (or press Stop on the '
+                'notification) to stop it.',
+                style: TextStyle(color: pal.sub, fontSize: 12),
+              ),
+              const SizedBox(height: 8),
+              Wrap(
+                spacing: 8,
+                children: [
+                  for (final m in const [0, 5, 10, 15, 30, 60])
+                    ChoiceChip(
+                      label: Text(m == 0 ? 'Off' : m == 60 ? 'Every 1 h' : 'Every $m min'),
+                      selected: s.nagMinutes == m,
+                      onSelected: (_) => s.setNagMinutes(m),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 4),
+              const Divider(),
+              Padding(
+                padding: const EdgeInsets.only(top: 6, bottom: 4),
+                child: Text('Reminders when the app is closed',
+                    style: TextStyle(fontWeight: FontWeight.w700, color: pal.text)),
+              ),
+              Text(
+                'Set Battery to "Unrestricted" (and allow Autostart on Xiaomi, '
+                'Oppo, Vivo, Infinix, Tecno, Samsung). Do not swipe the app away '
+                'with "Force stop".',
+                style: TextStyle(color: pal.sub, fontSize: 12),
+              ),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: Notifier.openBatterySettings,
+                      icon: const Icon(Icons.battery_charging_full_rounded, size: 18),
+                      label: const Text('Battery'),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: Notifier.openAppSettings,
+                      icon: const Icon(Icons.settings_applications_rounded, size: 18),
+                      label: const Text('App settings'),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
               Row(
                 children: [
                   Expanded(

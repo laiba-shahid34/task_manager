@@ -18,6 +18,9 @@ Future<void> main() async {
 
   final state = AppState();
   await state.init();
+  Notifier.onDone = (id) => state.completeFromNotification(id);
+  final launchedDone = await Notifier.launchedWithDone();
+  if (launchedDone != null) await state.completeFromNotification(launchedDone);
   state.rescheduleAll(); // keep reminders alive across restarts
 
   runApp(

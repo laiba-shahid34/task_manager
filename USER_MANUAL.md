@@ -41,7 +41,8 @@
 
 ## 7. Reminders
 - A notification is shown at the due time, also when the app is closed.
-- If the task is still not completed, you get follow-up reminders after **10 minutes, 1 hour, 1 day and 1 week**. Completing the task cancels them.
+- If the task is still not completed, the app keeps reminding you every **5 / 10 / 15 / 30 / 60 minutes** (choose in **Settings > Keep reminding me**; default 10 min). It stops when you tick the task as done, press **Done** or **Stop** on the notification, or switch the reminder off.
+- Open the app now and then: it re-arms the reminders so the chain keeps going.
 - Choose the sound in **Settings > Reminder sound**:
   - Dreamy chime, Crystal bell, Soft pluck
   - Phone default
@@ -67,6 +68,6 @@ The **Stats** tab shows total, completed, pending and overdue tasks, your streak
 | Problem | Solution |
 |---|---|
 | No notification | Settings > Apps > Task Manager > Notifications must be ON. Tap **Allow** in the app Settings. |
-| Notification does not come when the app is closed | Set Battery to **Unrestricted** and do not use Force stop. |
+| Notification does not come when the app is closed | Settings > **Battery** button: set to **Unrestricted**; allow Autostart (Xiaomi/Oppo/Vivo/Infinix/Tecno); do not use Force stop. |
 | No music sound | Increase the phone's **media volume** and the music slider in Settings. |
 | Alarm is quiet | Increase the phone's **alarm volume**. |
