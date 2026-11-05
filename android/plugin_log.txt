@@ -1,0 +1,399 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/abdul/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Initialized native services in: C:\Users\abdul\.gradle\native
+Initialized jansi services in: C:\Users\abdul\.gradle\native
+Found daemon DaemonInfo{pid=19380, address=[50d4b7b2-cc2d-4872-9201-7595a681e135 port:52054, addresses:[/127.0.0.1]], state=Idle, lastBusy=1793865888118, context=DefaultDaemonContext[uid=57870902-16f9-4efa-9d23-3ee1567888f5,javaHome=C:\Program Files\Android\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\abdul\.gradle\daemon,pid=19380,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=4G,-XX:ReservedCodeCacheSize=512m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx8G,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-24 (no Daemon JVM specified, using current Java home), daemonOpts=[-XX:MaxMetaspaceSize=4G, -XX:ReservedCodeCacheSize=512m, -XX:+HeapDumpOnOutOfMemoryError, -Xmx8G, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=57870902-16f9-4efa-9d23-3ee1567888f5,javaHome=C:\Program Files\Android\Android Studio\jbr,javaVersion=21,javaVendor=JetBrains s.r.o.,daemonRegistryDir=C:\Users\abdul\.gradle\daemon,pid=19380,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-XX:MaxMetaspaceSize=4G,-XX:ReservedCodeCacheSize=512m,-XX:+HeapDumpOnOutOfMemoryError,-Xmx8G,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 15972). The daemon log file: C:\Users\abdul\.gradle\daemon\9.3.1\daemon-15972.out.log
+Starting 2nd build in daemon [uptime: 3 mins 37.992 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 8 GiB, non-heap usage: 4% of 4 GiB]
+Using 12 worker leases.
+Operational build model parameters: {requiresToolingModels=false, parallelProjectExecution=false, configureOnDemand=false, configurationCache=false, configurationCacheParallelStore=false, configurationCacheParallelLoad=true, isolatedProjects=false, parallelProjectConfiguration=false, intermediateModelCache=false, parallelToolingApiActions=false, invalidateCoupledProjects=false, modelAsProjectDependency=false, resilientModelBuilding=false}
+Invalidating in-memory cache of D:\AndroidStudioProjects\task_manager\android\.gradle\9.3.1\fileHashes\fileHashes.bin
+Invalidating in-memory cache of D:\AndroidStudioProjects\task_manager\android\.gradle\buildOutputCleanup\outputFiles.bin
+Invalidating in-memory cache of D:\AndroidStudioProjects\task_manager\android\.gradle\9.3.1\fileHashes\resourceHashesCache.bin
+Now considering [D:\AndroidStudioProjects\task_manager\android, C:\src\flutter\packages\flutter_tools\gradle] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Now considering [C:\src\flutter\packages\flutter_tools\gradle, D:\AndroidStudioProjects\task_manager\android] as hierarchies to watch
+Invalidating in-memory cache of C:\src\flutter\packages\flutter_tools\gradle\.gradle\buildOutputCleanup\outputFiles.bin
+
+> Configure project :gradle
+Evaluating project ':gradle' using build file 'C:\src\flutter\packages\flutter_tools\gradle\build.gradle.kts'.
+Resolved plugin [id: 'org.gradle.java-gradle-plugin']
+Resolved plugin [id: 'org.gradle.groovy']
+Resolved plugin [id: 'org.gradle.kotlin.kotlin-dsl', version: '6.4.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '2.2.20']
+Invalidating in-memory cache of C:\Users\abdul\.gradle\caches\journal-1\file-access.bin
+Invalidating in-memory cache of C:\Users\abdul\.gradle\caches\9.3.1\fileHashes\kotlinDslCompileAvoidanceClasspathHashCache.bin
+Invalidating in-memory cache of C:\Users\abdul\.gradle\caches\9.3.1\fileHashes\fileHashes.bin
+Invalidating in-memory cache of C:\Users\abdul\.gradle\caches\9.3.1\fileHashes\resourceHashesCache.bin
+Build 1c46a86f-1555-45ac-9a33-dfc0fa46726b is started
+Using Kotlin Gradle Plugin gradle813 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+Resolved plugin [id: 'dev.flutter.flutter-plugin-loader', version: '1.0.0']
+Resolved plugin [id: 'com.android.application', version: '9.1.0', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.4.0', apply: false]
+Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#258,Execution worker,5,main]) started.
+:gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#258,Execution worker,5,main]) started.
+Invalidating in-memory cache of C:\src\flutter\packages\flutter_tools\gradle\.gradle\9.3.1\executionHistory\executionHistory.bin
+
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':gradle:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :gradle:compileKotlin (Thread[#258,Execution worker,5,main]) started.
+:gradle:compileKotlin (Thread[#258,Execution worker,5,main]) started.
+Resolve mutations for :gradle:pluginDescriptors (Thread[#263,Execution worker Thread 6,5,main]) started.
+:gradle:pluginDescriptors (Thread[#263,Execution worker Thread 6,5,main]) started.
+
+> Task :gradle:pluginDescriptors UP-TO-DATE
+Caching disabled for task ':gradle:pluginDescriptors' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+Resolve mutations for :gradle:processResources (Thread[#263,Execution worker Thread 6,5,main]) started.
+:gradle:processResources (Thread[#263,Execution worker Thread 6,5,main]) started.
+
+> Task :gradle:processResources UP-TO-DATE
+Caching disabled for task ':gradle:processResources' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:processResources' as it is up-to-date.
+
+> Task :gradle:compileKotlin
+Caching disabled for task ':gradle:compileKotlin' because:
+  Build cache is disabled
+Task ':gradle:compileKotlin' is not up-to-date because:
+  Value of input property 'kotlinJavaToolchainProvider.javaVersion' has changed for task ':gradle:compileKotlin'
+The input changes require a full rebuild for incremental task ':gradle:compileKotlin'.
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+Overriding '-Xjvm-default=all' to stable compiler plugin argument '-jvm-default=no-compatibility' in the presence of 'kotlin-dsl' plugin.
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+file or directory 'C:\src\flutter\packages\flutter_tools\gradle\src\main\java', not found
+Kotlin source files: C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\AgpCommonExtensionWrapper.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\AppLinkSettings.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\BaseApplicationNameHandler.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\Deeplink.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\DependencyVersionChecker.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\FlutterAppPluginLoaderPlugin.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\FlutterExtension.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\FlutterPlugin.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\FlutterPluginConstants.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\FlutterPluginUtils.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\IntentFilterCheck.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\NativePluginLoaderReflectionBridge.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\plugins\PluginHandler.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\BaseFlutterTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\BaseFlutterTaskHelper.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\CopyFlutterJniLibsTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\DeepLinkJsonFromManifestTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\DeepLinkJsonFromManifestTaskHelper.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\FlutterTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\FlutterTaskHelper.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\PrintTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\tasks\ValidateCompileSdkVersionTask.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\VersionFetcher.kt, C:\src\flutter\packages\flutter_tools\gradle\src\main\kotlin\VersionUtils.kt
+Java source files: 
+Script source files: 
+Script file extensions: 
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: C:\Program Files\Java\jdk-24
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), sourceChanges=org.jetbrains.kotlin.buildtools.api.SourcesChanges$Unknown@5fc7b69b, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=C:\src\flutter\packages\flutter_tools\gradle\build\kotlin\compileKotlin\cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=C:\src\flutter\packages\flutter_tools\gradle\build\kotlin\compileKotlin\local-state\build-history.bin, useModuleDetection=false), icFeatures=IncrementalCompilationFeatures(usePreciseJavaTracking=true, withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false, enableMonotonousIncrementalCompileSetExpansion=true), outputFiles=[C:\src\flutter\packages\flutter_tools\gradle\build\classes\kotlin\main, C:\src\flutter\packages\flutter_tools\gradle\build\kotlin\compileKotlin\cacheable, C:\src\flutter\packages\flutter_tools\gradle\build\kotlin\compileKotlin\local-state])
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/Deeplink.kt:13:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to property.
+- To opt in to applying to both value parameter and property, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/Deeplink.kt:15:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to property.
+- To opt in to applying to both value parameter and property, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/Deeplink.kt:17:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to property.
+- To opt in to applying to both value parameter and property, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/Deeplink.kt:19:5 This annotation is currently applied to the value parameter only, but in the future it will also be applied to property.
+- To opt in to applying to both value parameter and property, add '-Xannotation-default-target=param-property' to your compiler arguments.
+- To keep applying to the value parameter only, use the '@param:' annotation target.
+
+See https://youtrack.jetbrains.com/issue/KT-73255 for more details.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/FlutterPlugin.kt:12:8 'interface ApkVariant : Any, BaseVariant, InstallableVariant, AndroidArtifactVariant, InternalBaseVariant' is deprecated. Deprecated in Java.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/FlutterPlugin.kt:664:69 'interface ApkVariant : Any, BaseVariant, InstallableVariant, AndroidArtifactVariant, InternalBaseVariant' is deprecated. Deprecated in Java.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/FlutterPluginUtils.kt:766:29 Condition is always 'true'.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/plugins/PluginHandler.kt:168:70 Unchecked cast of 'NamedDomainObjectContainer<out BuildType>' to 'NamedDomainObjectContainer<BuildType>'.
+w: file:///C:/src/flutter/packages/flutter_tools/gradle/src/main/kotlin/plugins/PluginHandler.kt:169:75 Unchecked cast of 'NamedDomainObjectContainer<out BuildType>' to 'NamedDomainObjectContainer<BuildType>'.
+Finished executing kotlin compiler using DAEMON strategy
+Resolve mutations for :gradle:compileJava (Thread[#258,Execution worker,5,main]) started.
+:gradle:compileJava (Thread[#258,Execution worker,5,main]) started.
+
+> Task :gradle:compileJava NO-SOURCE
+Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+Resolve mutations for :gradle:compileGroovy (Thread[#258,Execution worker,5,main]) started.
+:gradle:compileGroovy (Thread[#258,Execution worker,5,main]) started.
+
+> Task :gradle:compileGroovy NO-SOURCE
+Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+Resolve mutations for :gradle:classes (Thread[#258,Execution worker,5,main]) started.
+:gradle:classes (Thread[#258,Execution worker,5,main]) started.
+
+> Task :gradle:classes UP-TO-DATE
+Skipping task ':gradle:classes' as it has no actions.
+Resolve mutations for :gradle:jar (Thread[#258,Execution worker,5,main]) started.
+:gradle:jar (Thread[#258,Execution worker,5,main]) started.
+
+> Task :gradle:jar UP-TO-DATE
+Caching disabled for task ':gradle:jar' because:
+  Build cache is disabled
+  Not worth caching
+Skipping task ':gradle:jar' as it is up-to-date.
+Settings evaluated using settings file 'D:\AndroidStudioProjects\task_manager\android\settings.gradle.kts'.
+Projects loaded. Root project using build file 'D:\AndroidStudioProjects\task_manager\android\build.gradle.kts'.
+Included projects: [root project 'android', project ':app', project ':flutter_local_notifications', project ':flutter_timezone', project ':sqflite_android']
+
+> Configure project :app
+Evaluating project ':app' using build file 'D:\AndroidStudioProjects\task_manager\android\app\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application']
+Resolved plugin [id: 'dev.flutter.flutter-gradle-plugin']
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+Using default execution profile
+Build 0b70681c-ebf8-46aa-8a9e-3ed40c479996 is started
+Using Kotlin Gradle Plugin gradle813 variant
+Using Kotlin Gradle Plugin gradle813 variant
+Using Kotlin Gradle Plugin gradle813 variant
+Using Kotlin Gradle Plugin gradle813 variant
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+C/C++: android.ndkVersion from module build.gradle is [28.2.13676358]
+C/C++: android.ndkPath from module build.gradle is not set
+C/C++: ndk.dir in local.properties is not set
+C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+C/C++: sdkFolder is D:\Android\Sdk
+w: Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+
+> Configure project :
+Evaluating root project 'android' using build file 'D:\AndroidStudioProjects\task_manager\android\build.gradle.kts'.
+
+> Configure project :flutter_local_notifications
+Evaluating project ':flutter_local_notifications' using build file 'D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android\build.gradle'.
+Using default execution profile
+w: Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':flutter_local_notifications' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+
+> Configure project :flutter_timezone
+Evaluating project ':flutter_timezone' using build file 'D:\PubCache\hosted\pub.dev\flutter_timezone-5.1.1\android\build.gradle'.
+Using default execution profile
+w: Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':flutter_timezone' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+
+> Configure project :sqflite_android
+Evaluating project ':sqflite_android' using build file 'D:\PubCache\hosted\pub.dev\sqflite_android-2.4.5\android\build.gradle'.
+Using default execution profile
+w: Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':sqflite_android' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+All projects evaluated.
+Task path ':flutter_local_notifications:compileDebugJavaWithJavac' matched project ':flutter_local_notifications'
+Task name matched 'compileDebugJavaWithJavac'
+Selected primary task 'compileDebugJavaWithJavac' from project :flutter_local_notifications
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Tasks to be executed: [task ':flutter_local_notifications:checkKotlinGradlePluginConfigurationErrors', task ':flutter_local_notifications:preBuild', task ':flutter_local_notifications:preDebugBuild', task ':flutter_local_notifications:generateDebugResources', task ':flutter_local_notifications:packageDebugResources', task ':flutter_local_notifications:processDebugNavigationResources', task ':flutter_local_notifications:parseDebugLocalResources', task ':flutter_local_notifications:generateDebugRFile', task ':flutter_local_notifications:compileDebugKotlin', task ':flutter_local_notifications:javaPreCompileDebug', task ':flutter_local_notifications:compileDebugJavaWithJavac']
+Tasks that were excluded: []
+Resolve mutations for :flutter_local_notifications:checkKotlinGradlePluginConfigurationErrors (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:checkKotlinGradlePluginConfigurationErrors (Thread[#262,Execution worker Thread 5,5,main]) started.
+Invalidating in-memory cache of D:\AndroidStudioProjects\task_manager\android\.gradle\9.3.1\executionHistory\executionHistory.bin
+
+> Task :flutter_local_notifications:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':flutter_local_notifications:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :flutter_local_notifications:preBuild (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:preBuild (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:preBuild UP-TO-DATE
+Skipping task ':flutter_local_notifications:preBuild' as it has no actions.
+Resolve mutations for :flutter_local_notifications:preDebugBuild (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:preDebugBuild (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:preDebugBuild UP-TO-DATE
+Skipping task ':flutter_local_notifications:preDebugBuild' as it has no actions.
+Resolve mutations for :flutter_local_notifications:generateDebugResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:generateDebugResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:generateDebugResources UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:generateDebugResources' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:generateDebugResources' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:packageDebugResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:packageDebugResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:packageDebugResources UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:packageDebugResources' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:packageDebugResources' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:processDebugNavigationResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:processDebugNavigationResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:processDebugNavigationResources UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:processDebugNavigationResources' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:processDebugNavigationResources' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:parseDebugLocalResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:parseDebugLocalResources (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:parseDebugLocalResources UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:parseDebugLocalResources' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:parseDebugLocalResources' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:generateDebugRFile (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:generateDebugRFile (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:generateDebugRFile UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:generateDebugRFile' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:generateDebugRFile' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:compileDebugKotlin (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:compileDebugKotlin (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:compileDebugKotlin NO-SOURCE
+Skipping task ':flutter_local_notifications:compileDebugKotlin' as it has no source files and no previous output files.
+Resolve mutations for :flutter_local_notifications:javaPreCompileDebug (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:javaPreCompileDebug (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:javaPreCompileDebug UP-TO-DATE
+Caching disabled for task ':flutter_local_notifications:javaPreCompileDebug' because:
+  Build cache is disabled
+Skipping task ':flutter_local_notifications:javaPreCompileDebug' as it is up-to-date.
+Resolve mutations for :flutter_local_notifications:compileDebugJavaWithJavac (Thread[#262,Execution worker Thread 5,5,main]) started.
+:flutter_local_notifications:compileDebugJavaWithJavac (Thread[#262,Execution worker Thread 5,5,main]) started.
+
+> Task :flutter_local_notifications:compileDebugJavaWithJavac
+Caching disabled for JdkImageTransform: D:\Android\Sdk\platforms\android-36\core-for-system-modules.jar because:
+  Build cache is disabled
+Starting process 'command 'C:\Program Files\Java\jdk-24\bin\jlink.exe''. Working directory: D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android Command: C:\Program Files\Java\jdk-24\bin\jlink.exe --version
+Successfully started process 'command 'C:\Program Files\Java\jdk-24\bin\jlink.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-24\bin\javac.exe''. Working directory: D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android Command: C:\Program Files\Java\jdk-24\bin\javac.exe --system=none --patch-module=java.base=D:\Android\Sdk\platforms\android-36\core-for-system-modules.jar -d C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\temp C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\temp\module-info.java
+Successfully started process 'command 'C:\Program Files\Java\jdk-24\bin\javac.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-24\bin\jmod.exe''. Working directory: D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android Command: C:\Program Files\Java\jdk-24\bin\jmod.exe create --module-version 24 --target-platform LINUX-OTHER --class-path C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\temp\module.jar C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\temp\jmod\java.base.jmod
+Successfully started process 'command 'C:\Program Files\Java\jdk-24\bin\jmod.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-24\bin\jlink.exe''. Working directory: D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android Command: C:\Program Files\Java\jdk-24\bin\jlink.exe --module-path C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\temp\jmod --add-modules java.base --output C:\Users\abdul\.gradle\caches\9.3.1\transforms\d0a464fa784ad089605691d9d590918b\workspace\transformed\output\jdkImage --disable-plugin system-modules
+Successfully started process 'command 'C:\Program Files\Java\jdk-24\bin\jlink.exe''
+Custom actions are attached to task ':flutter_local_notifications:compileDebugJavaWithJavac'.
+Caching disabled for task ':flutter_local_notifications:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Task ':flutter_local_notifications:compileDebugJavaWithJavac' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':flutter_local_notifications:compileDebugJavaWithJavac'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Java\jdk-24'.
+file or directory 'D:\PubCache\hosted\pub.dev\flutter_local_notifications-22.3.3\android\src\debug\java', not found
+Compiling with JDK Java compiler API.
+Class dependency analysis for incremental compilation took 0.2 secs.
+Created classpath snapshot for incremental compilation in 0.312 secs.
+Build 1c46a86f-1555-45ac-9a33-dfc0fa46726b is closed
+Build 0b70681c-ebf8-46aa-8a9e-3ed40c479996 is closed
+
+[Incubating] Problems report is available at: file:///D:/AndroidStudioProjects/task_manager/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 44s
+11 actionable tasks: 2 executed, 9 up-to-date
+Watched directory hierarchies: [C:\src\flutter\packages\flutter_tools\gradle]
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
