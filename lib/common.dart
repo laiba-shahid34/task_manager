@@ -30,7 +30,7 @@ class Pal {
     bg: Color(0xFFFFF3F1),
     card: Color(0xFFFFFFFF),
     text: Color(0xFF3A2025),
-    sub: Color(0xFF9A6B70),
+    sub: Color(0xFF7A4650),
     primary: Color(0xFFD9577A),
     soft: Color(0xFFFFE3E6),
     border: Color(0xFFF3CDD2),
@@ -41,7 +41,7 @@ class Pal {
     bg: Color(0xFF2A1B18),
     card: Color(0xFF3A2824),
     text: Color(0xFFFBEAE6),
-    sub: Color(0xFFD0A9A4),
+    sub: Color(0xFFF3DAD6),
     primary: Color(0xFFE8798F),
     soft: Color(0xFF3A2824),
     border: Color(0xFF6B5030),
@@ -59,6 +59,39 @@ class Pal {
       : const [Color(0xFFD9577A), Color(0xFFEE9AAE)];
 }
 
+// every text style gets a heavier weight so it stays readable on the photo background
+const TextTheme _boldText = TextTheme(
+  displayLarge: TextStyle(fontWeight: FontWeight.w700),
+  displayMedium: TextStyle(fontWeight: FontWeight.w700),
+  displaySmall: TextStyle(fontWeight: FontWeight.w700),
+  headlineLarge: TextStyle(fontWeight: FontWeight.w800),
+  headlineMedium: TextStyle(fontWeight: FontWeight.w800),
+  headlineSmall: TextStyle(fontWeight: FontWeight.w800),
+  titleLarge: TextStyle(fontWeight: FontWeight.w800),
+  titleMedium: TextStyle(fontWeight: FontWeight.w700),
+  titleSmall: TextStyle(fontWeight: FontWeight.w700),
+  bodyLarge: TextStyle(fontWeight: FontWeight.w600),
+  bodyMedium: TextStyle(fontWeight: FontWeight.w600),
+  bodySmall: TextStyle(fontWeight: FontWeight.w600),
+  labelLarge: TextStyle(fontWeight: FontWeight.w700),
+  labelMedium: TextStyle(fontWeight: FontWeight.w700),
+  labelSmall: TextStyle(fontWeight: FontWeight.w700),
+);
+
+/// Shows a "deleted" message with UNDO that closes by itself after 4 seconds.
+void showUndoSnack(ScaffoldMessengerState messenger, String text, VoidCallback onUndo) {
+  messenger.hideCurrentSnackBar();
+  messenger.showSnackBar(
+    SnackBar(
+      content: Text(text),
+      duration: const Duration(seconds: 4),
+      persist: false,
+      showCloseIcon: true,
+      action: SnackBarAction(label: 'UNDO', onPressed: onUndo),
+    ),
+  );
+}
+
 ThemeData buildTheme(Brightness b) {
   final pal = b == Brightness.dark ? Pal.darkPal : Pal.light;
   return ThemeData(
@@ -68,7 +101,15 @@ ThemeData buildTheme(Brightness b) {
       brightness: b,
     ),
     scaffoldBackgroundColor: pal.bg,
-    snackBarTheme: const SnackBarThemeData(behavior: SnackBarBehavior.floating),
+    textTheme: _boldText,
+    snackBarTheme: const SnackBarThemeData(
+      behavior: SnackBarBehavior.floating,
+      backgroundColor: Color(0xFF3A2025),
+      contentTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+      actionTextColor: Color(0xFFFFB3C6),
+      showCloseIcon: true,
+      closeIconColor: Colors.white,
+    ),
     navigationBarTheme: NavigationBarThemeData(
       backgroundColor: pal.card,
       indicatorColor: pal.soft,

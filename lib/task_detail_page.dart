@@ -51,12 +51,7 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
     final messenger = ScaffoldMessenger.of(context);
     nav.pop();
     final removed = await s.deleteTask(t);
-    messenger.showSnackBar(
-      SnackBar(
-        content: Text('"${removed.title}" deleted'),
-        action: SnackBarAction(label: 'UNDO', onPressed: () => s.restoreTask(removed)),
-      ),
-    );
+    showUndoSnack(messenger, '"${removed.title}" deleted', () => s.restoreTask(removed));
   }
 
   Future<void> _addStep(AppState s, Task t) async {
@@ -134,7 +129,7 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
                           ),
                           if (t.description.isNotEmpty) ...[
                             const SizedBox(height: 8),
-                            Text(t.description, style: TextStyle(color: pal.sub, height: 1.35)),
+                            Text(t.description, style: TextStyle(color: pal.text, fontWeight: FontWeight.w600, height: 1.35)),
                           ],
                           const SizedBox(height: 14),
                           Wrap(
@@ -236,9 +231,10 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
                                   textCapitalization: TextCapitalization.sentences,
                                   onSubmitted: (_) => _addStep(s, t),
                                   style: TextStyle(color: pal.text),
-                                  decoration: const InputDecoration(
+                                  decoration: InputDecoration(
                                     border: InputBorder.none,
                                     hintText: 'Add a sub-task...',
+                                    hintStyle: TextStyle(fontWeight: FontWeight.w700, color: pal.sub),
                                   ),
                                 ),
                               ),
@@ -273,7 +269,13 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
                     Row(
                       children: [
                         Expanded(
-                          child: OutlinedButton.icon(
+                          child: FilledButton.icon(
+                            style: FilledButton.styleFrom(
+                              backgroundColor: pal.primary,
+                              foregroundColor: Colors.white,
+                              minimumSize: const Size.fromHeight(48),
+                              textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
+                            ),
                             onPressed: () => Navigator.of(context).push(
                               MaterialPageRoute<void>(
                                 builder: (_) => TaskFormPage(task: t.clone()),
@@ -285,10 +287,13 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
                         ),
                         const SizedBox(width: 10),
                         Expanded(
-                          child: OutlinedButton.icon(
+                          child: FilledButton.icon(
                             onPressed: () => _confirmDelete(s, t),
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: const Color(0xFFE5578A),
+                            style: FilledButton.styleFrom(
+                              backgroundColor: const Color(0xFFC62F5A),
+                              foregroundColor: Colors.white,
+                              minimumSize: const Size.fromHeight(48),
+                              textStyle: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
                             ),
                             icon: const Icon(Icons.delete_rounded),
                             label: const Text('Delete'),
@@ -309,12 +314,12 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
   Widget _pill(String text, Color color) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
-          color: color.withValues(alpha: 0.16),
+          color: color,
           borderRadius: BorderRadius.circular(14),
         ),
         child: Text(
           text,
-          style: TextStyle(fontWeight: FontWeight.w700, color: color, fontSize: 12.5),
+          style: const TextStyle(fontWeight: FontWeight.w800, color: Colors.white, fontSize: 13),
         ),
       );
 

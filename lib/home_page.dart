@@ -83,16 +83,7 @@ class _HomePageState extends State<HomePage> {
     final s = context.read<AppState>();
     final messenger = ScaffoldMessenger.of(context);
     final removed = await s.deleteTask(t);
-    messenger.hideCurrentSnackBar();
-    messenger.showSnackBar(
-      SnackBar(
-        content: Text('"${removed.title}" deleted'),
-        action: SnackBarAction(
-          label: 'UNDO',
-          onPressed: () => s.restoreTask(removed),
-        ),
-      ),
-    );
+    showUndoSnack(messenger, '"${removed.title}" deleted', () => s.restoreTask(removed));
   }
 
   void _open(Task t) {
@@ -320,8 +311,9 @@ class _HomePageState extends State<HomePage> {
                 selectedColor: pal.primary,
                 backgroundColor: pal.card,
                 side: BorderSide(color: pal.border),
+                labelPadding: const EdgeInsets.symmetric(horizontal: 8),
                 labelStyle: TextStyle(
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w800,
                   color: _filter == f ? Colors.white : pal.text,
                 ),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -349,9 +341,10 @@ class _HomePageState extends State<HomePage> {
                     showCheckmark: false,
                     visualDensity: VisualDensity.compact,
                     selectedColor: pal.soft,
-                    backgroundColor: Colors.transparent,
+                    backgroundColor: pal.card.withValues(alpha: 0.8),
                     side: BorderSide(color: pal.border),
-                    labelStyle: TextStyle(fontSize: 12, color: pal.text),
+                    labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+                    labelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: pal.text),
                     onSelected: (_) => setState(() => _category = null),
                   ),
                 ),
@@ -364,9 +357,10 @@ class _HomePageState extends State<HomePage> {
                       showCheckmark: false,
                       visualDensity: VisualDensity.compact,
                       selectedColor: c.color.withValues(alpha: 0.25),
-                      backgroundColor: Colors.transparent,
+                      backgroundColor: pal.card.withValues(alpha: 0.8),
                       side: BorderSide(color: pal.border),
-                      labelStyle: TextStyle(fontSize: 12, color: pal.text),
+                      labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+                    labelStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: pal.text),
                       onSelected: (_) => setState(
                           () => _category = _category == c.key ? null : c.key),
                     ),

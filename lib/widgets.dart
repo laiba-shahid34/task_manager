@@ -372,21 +372,32 @@ class EmptyState extends StatelessWidget {
     final pal = Pal.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 28),
-      child: Column(
-        children: [
-          const Floating(distance: 5, child: BearAvatar(size: 104, asset: 'assets/images/bear_pair.jpg', round: false)),
-          const SizedBox(height: 8),
-          Text(
-            title,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: pal.text),
+      child: Center(
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(22, 16, 22, 18),
+          decoration: BoxDecoration(
+            color: pal.card.withValues(alpha: 0.88),
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(color: pal.border),
           ),
-          const SizedBox(height: 4),
-          Text(
-            subtitle,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: pal.sub),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Floating(distance: 5, child: BearAvatar(size: 104, asset: 'assets/images/bear_pair.jpg', round: false)),
+              const SizedBox(height: 8),
+              Text(
+                title,
+                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: pal.text),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                subtitle,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700, color: pal.text),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
