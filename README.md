@@ -5,6 +5,7 @@ It runs on **Android** and in the **web browser (Chrome)**. Plan your day, repea
 
 > 📦 **Download the app:** [`release/task_manager.apk`](release/task_manager.apk)
 > 📖 **Docs:** [User manual](USER_MANUAL.md) · [Testing report](TESTING.md)
+> 🎥 **Video demo:** [Watch the demo on Google Drive](https://drive.google.com/file/d/1OKb4TgAEFt_M_N2R2N5o9Pcb9B32pOQp/view?usp=drivesdk)
 
 ---
 
@@ -193,7 +194,7 @@ Run the tests:
 ```bash
 flutter test
 ```
-> 🎥 **Video demo:** [Watch the demo on Google Drive](https://drive.google.com/file/d/1OKb4TgAEFt_M_N2R2N5o9Pcb9B32pOQp/view?usp=drivesdk)
+
 
 ## 🔔 Notes about reminders
 
